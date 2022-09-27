@@ -12,7 +12,8 @@ namespace PermissionManagement.MVC.Data
         }
         public DbSet<DuesInformation> DuesInformations { get; set; }
         public DbSet<UserModel> UsersModel { get; set; }
-        
         public DbSet<DuesDetailedInformation> DuesDetailedInformations { get; set; }
+        public DbSet<FileOnDatabaseModel> FilesOnDatabase { get; set; }
+        public DbSet<FileOnFileSystemModel> FilesOnFileSystem { get; set; }
     }
 }
