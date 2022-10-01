@@ -4,6 +4,7 @@ $(document).ready(function () {
         "processing": true,
         "serverSide": true,
         "filter": true,
+        "responsive": true,
         "ajax": {
             "type": "POST",
             "url": "/Dues/GetDuesInformation",
@@ -48,6 +49,7 @@ function showTable() {
         "processing": true,
         "serverSide": true,
         "filter": true,
+        "responsive": true,
         "ajax": {
             "type": "POST",
             "url": "/Dues/GetDuesDetailedInformation",
