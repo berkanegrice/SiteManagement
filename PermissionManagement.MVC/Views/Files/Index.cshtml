@@ -1,5 +1,9 @@
 @using Microsoft.AspNetCore.Mvc.TagHelpers
+@using PermissionManagement.MVC.Constants
+@using Microsoft.AspNetCore.Authorization
 @model PermissionManagement.MVC.Models.ViewModels.FileUploadViewModel
+@inject IAuthorizationService AuthorizationService
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -90,7 +94,10 @@ else
                     <td>@file.CreatedOn</td>
                     <td>
                         <a type="button" class="btn btn-primary" asp-controller="Files" asp-action="DownloadFileFromDatabase" asp-route-id="@file.Id">Indir</a>
-                        <a type="button" class="btn btn-danger" asp-controller="Files" asp-action="DeleteFileFromDatabase" asp-route-id="@file.Id">Sil</a>
+                        @if ((AuthorizationService.AuthorizeAsync(User, Permissions.File.Delete)).Result.Succeeded)
+                        {
+                            <a type="button" class="btn btn-danger" asp-controller="Files" asp-action="DeleteFileFromDatabase" asp-route-id="@file.Id">Sil</a>    
+                        }
                     </td>
                 </tr>
             }

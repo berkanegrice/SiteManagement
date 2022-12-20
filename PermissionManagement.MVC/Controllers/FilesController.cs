@@ -89,7 +89,8 @@ namespace PermissionManagement.MVC.Controllers
             TempData["Message"] = "File successfully uploaded to Database";
             return RedirectToAction("Index");
         }
-        private async Task<FileUploadViewModel> LoadAllFiles()
+        
+        public async Task<FileUploadViewModel> LoadAllFiles()
         {
             var viewModel = new FileUploadViewModel();
             viewModel.FilesOnDatabase = await _context.FilesOnDatabase.ToListAsync();

@@ -26,6 +26,7 @@ namespace PermissionManagement.MVC.Controllers
             var allPermissions = new List<RoleClaimsViewModel>();
             // allPermissions.GetPermissions(typeof(Permissions.Products), roleId);
             allPermissions.GetPermissions(typeof(Permissions.Dues), roleId);
+            allPermissions.GetPermissions(typeof(Permissions.File), roleId);
             
             var role = await _roleManager.FindByIdAsync(roleId);
             model.RoleId = roleId;

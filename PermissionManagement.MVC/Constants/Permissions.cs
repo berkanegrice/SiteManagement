@@ -15,13 +15,13 @@ namespace PermissionManagement.MVC.Constants
             };
         }
 
-        public static class Products
-        {
-            public const string View = "Permissions.Products.View";
-            public const string Create = "Permissions.Products.Create";
-            public const string Edit = "Permissions.Products.Edit";
-            public const string Delete = "Permissions.Products.Delete";
-        }
+        // public static class Products
+        // {
+        //     public const string View = "Permissions.Products.View";
+        //     public const string Create = "Permissions.Products.Create";
+        //     public const string Edit = "Permissions.Products.Edit";
+        //     public const string Delete = "Permissions.Products.Delete";
+        // }
 
         public static class Dues
         {
@@ -38,5 +38,13 @@ namespace PermissionManagement.MVC.Constants
             public const string Edit = "Permissions.LeaseHolder.Edit";
             public const string Delete = "Permissions.LeaseHolder.Delete";
         }
+        public static class File
+        {
+            public const string View = "Permissions.File.View";
+            public const string Create = "Permissions.File.Create";
+            public const string Edit = "Permissions.File.Edit";
+            public const string Delete = "Permissions.File.Delete";
+        }
+        
     }
 }

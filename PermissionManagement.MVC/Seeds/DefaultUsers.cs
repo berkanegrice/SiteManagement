@@ -41,7 +41,7 @@ namespace PermissionManagement.MVC.Seeds
         //         HeaderValidated = null,
         //         MissingFieldFound = null
         //     };
-        //     using var reader = new StreamReader("/home/berkan/Downloads/mizan.csv");
+        //     using var reader = new StreamReader("/home/berkan/Downloads/yeni/Mizan_2022_110.csv");
         //     using var csv = new CsvReader(reader, config);
         //     csv.Read();
         //     var records = csv.GetRecords<DuesInformation>();
@@ -58,7 +58,7 @@ namespace PermissionManagement.MVC.Seeds
         //         HeaderValidated = null,
         //         MissingFieldFound = null
         //     };
-        //     using var reader = new StreamReader("/home/berkan/Downloads/Muavin-Final.csv");
+        //     using var reader = new StreamReader("/home/berkan/Downloads/yeni/Muavin_2022_10_final.csv");
         //     using var csv = new CsvReader(reader, config);
         //     // csv.Read();
         //     var records = csv.GetRecords<DuesDetailedInformation>();

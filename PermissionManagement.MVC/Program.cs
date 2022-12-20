@@ -26,11 +26,11 @@ namespace PermissionManagement.MVC
                     var userManager = services.GetRequiredService<UserManager<IdentityUser>>();
                     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
 
-                    // var dbContext = services.GetRequiredService<ApplicationDbContext>();
+                    var dbContext = services.GetRequiredService<ApplicationDbContext>();
                     
-                    await Seeds.DefaultRoles.SeedAsync(userManager, roleManager);
-                    await Seeds.DefaultUsers.SeedBasicUserAsync(userManager, roleManager);
-                    await Seeds.DefaultUsers.SeedSuperAdminAsync(userManager, roleManager);
+                    // await Seeds.DefaultRoles.SeedAsync(userManager, roleManager);
+                    // await Seeds.DefaultUsers.SeedBasicUserAsync(userManager, roleManager);
+                    // await Seeds.DefaultUsers.SeedSuperAdminAsync(userManager, roleManager);
 
 
                     // Seeds.DefaultUsers.SeedDetailedDuesInformation();

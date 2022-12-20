@@ -26,8 +26,8 @@ namespace PermissionManagement.MVC
             services.AddSingleton<IAuthorizationPolicyProvider, PermissionPolicyProvider>();
             services.AddScoped<IAuthorizationHandler, PermissionAuthorizationHandler>();
             services.AddDbContext<ApplicationDbContext>(
-                options => options.UseSqlServer(Configuration.GetConnectionString("DevelopmentDb"),
-                    // options => options.UseSqlServer(Configuration.GetConnectionString("ProductDb"),
+                // options => options.UseSqlServer(Configuration.GetConnectionString("DevelopmentDb"),
+                    options => options.UseSqlServer(Configuration.GetConnectionString("ProductDb"),
                     b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
             services.AddIdentity<IdentityUser, IdentityRole>()
                     .AddEntityFrameworkStores<ApplicationDbContext>()
